@@ -1,0 +1,219 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "section nav"
+                         "section main";
+    grid-template-columns: 1fr 92%;
+}
+
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #dedede;
+}
+
+nav .icon{
+    margin:  10px;
+}
+
+.start-div-nav{
+    display: flex;
+    align-items: center;
+}
+
+.middle-div-nav{
+    display: flex;
+    align-items: center;
+}
+
+.end-div-nav{
+    display: flex;
+    align-items: center;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.icon{
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.icon-search, .icon-voice{
+    height: 10px;
+}
+
+.button-search{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-right: 4%;
+    border: 1px solid #dedede;
+    width: 50px;
+    padding: 1.5% 0;
+}
+
+
+.button-search,
+.button-voice,
+.create-icon-conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip{
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 4px 8px 4px 8px;
+    border-radius: 10px;
+    font-size: 8px;
+    pointer-events: none;
+    opacity: 0;
+    bottom: -20px;
+
+    transition: opacity 0.15s;
+}
+
+.create-icon-conteiner:hover .tooltip,
+.button-voice:hover .tooltip,
+.button-search:hover .tooltip{
+    opacity: 1;
+}
+
+.number-notification{
+    position: absolute;
+    background-color: red;
+    color: #fff;
+    font-size: 6px;
+    border-radius: 100%;
+    padding: 0.5px 2px 0.5px 2px;
+    top: 8px;
+    right: 10px;
+}
+
+
+input{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    text-align: start;
+    border: 1px solid #dedede;
+    font-size: 10px;
+    padding: 1% 0 1% 5%;
+    outline: none;
+}
+
+.button-voice{
+    border-radius: 8px;
+    border: none;
+    width: 20px;
+    padding: 1.5%;
+}
+
+.profile{
+    height: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+/* SECTION THINGS */
+
+section{
+    grid-area: section;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 5%;
+    padding: 20%;
+}
+
+.name-of-icon{
+    font-size: 5%;
+}
+
+section div:hover{
+    background-color: #dedede;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+/* MAIN THINGS */
+
+main{
+    background-color: rgb(248, 248, 248);
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "div div div div";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.all-div{
+    margin: 15% 5% 5% 5%;
+}
+
+.all-thing{
+    display: flex;
+    font-size: 10px;
+}
+
+.title-div{
+    margin: 3% 0 0 0;
+    cursor: pointer;
+}
+
+.profile-div{
+    display: flex;
+    margin: 5px 10px 0px 0px;
+    font-size: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.data-div{
+    font-size: 8px;
+    color: #606060;
+    cursor: pointer;
+}
+
+.tumble{
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tumbnail{
+    position: relative;
+}
+
+.video-time{
+    position: absolute;
+    background-color: black;
+    color: white;
+    bottom: 8px;
+    right: 5px;
+    padding: 1.5%;
+    font-size: 45%;
+}
